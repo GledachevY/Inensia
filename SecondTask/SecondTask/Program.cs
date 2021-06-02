@@ -6,7 +6,7 @@ namespace SecondTask
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine(CalculateNetSalary(int.Parse(Console.ReadLine())));
         }
 
         public static int CalculateNetSalary(int grossValue)
@@ -22,11 +22,11 @@ namespace SecondTask
             // Checking for social contributions.
             if (grossValue > 1000 && grossValue <= 3000)
             {
-                taxes = (int)Math.Round(grossValue * 0.15);
+                taxes += (int)Math.Round(grossValue * 0.15);
             }else if (grossValue > 3000)
             {
                 int taxableIncome = 3000;
-                taxes = (int)Math.Round(taxableIncome * 0.15);
+                taxes += (int)Math.Round(taxableIncome * 0.15);
             }
 
             // For implementing new taxes add new if else statements.
